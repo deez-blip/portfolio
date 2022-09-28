@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: blue;
+}
+
+.navbar img {
+    height: 100%;
+    margin-left: 5vh;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 5vh;
+}
+
+nav ul li {
+    font-size: 40px;
+}
