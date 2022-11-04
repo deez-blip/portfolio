@@ -8,7 +8,6 @@
     display: flex;
     justify-content: space-between;
     height: 100px;
-    background-color: blue;
 }
 
 .navbar img {
@@ -30,4 +29,35 @@
 
 nav ul li {
     font-size: 40px;
+}
+
+/* test */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.go-scroll {
+    height: 4rem;
+    width: 2rem;
+    border-radius: 2rem;
+    border: solid 2px #110f0e;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.go-scroll span {
+    content: "";
+    height: 1rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: #110f0e;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    animation: scroll-anim 2.5s infinite;
+    transition: 0.4s;
 }

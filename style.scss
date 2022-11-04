@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Colors
+    #1A374D
+    #406882
+    #6998AB
+    #ADCBD7
+    #743ad5
+    #743ad5
+            */
+@font-face {
+    font-family: "LeagueSpartan";
+    src: url(font/LeagueSpartan-Bold.otf);
+}
+
+body {
+    font-family: 'LeagueSpartan';
+    background-color: #406882;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        background-color: #6998AB;
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 100%;
+                margin-left: 5vh;
+            }
+
+            h2 {
+                margin-left: 5vh;
+                font-size: 35px;
+                color: #1A374D;
+            }
+               
+        }
+    
+        .infos {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar_ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin-right: 5vh;
+            li {
+
+                a {
+                    padding: 0.5em;
+                    font-size: 20px;
+                    color: #1A374D;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-bottom: 2px solid #743ad5;
+                    }
+                }
+            }
+        }
+    }
+
+    .separator {
+        /* Content is centered horizontally */
+        align-items: center;
+        display: flex;
+    
+        /* Used to set the position of text */
+        position: relative;
+    
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        &__content {
+            /* We won't see the separator line */
+            background: #fff;
+            border-radius: 20px;
+        
+            /* Displayed at the center of separator */
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        
+            /* Spacing */
+            padding: 0 0.25rem;
+        
+            /* Demo */
+            width: 60%;
+        
+            text-align: center;
+        }
+        
+        &__separator {
+            border-bottom: 1px solid #d1d5db;
+            height: 1px;
+            width: 100%;
+        }
+    }
+
+    /* ********** QUI JE SUIS *********** */
+    .qui-je-suis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        main {
+            width: 80%;
+            text-align: center;
+            p {
+                font-size: 1.2em;
+                line-height: 1.75em;
+                border-top: 4px solid;
+                border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+                border-image-slice: 1;
+                border-width: 4px;
+                margin: 0;
+                padding: 40px;
+                counter-increment: section;
+                position: relative;
+                color: #ADCBD7;
+                
+                //numbers/circles
+                &:before {
+                  content: counter(section);
+                  position: absolute;
+                  border-radius: 50%;
+                  padding: 10px;
+                  height: 1.25em;
+                  width: 1.25em;
+                  background-color: black;
+                  text-align: center;
+                  line-height: 1.25em;
+                  color: #ADCBD7;
+                  font-size: 1em;
+                }
+              }
+              //odd number borders
+              p:nth-child(odd) {
+                border-right: 4px solid;
+                padding-left: 0;
+                
+                &:before {
+                  left: 100%; 
+                  margin-left: -20px;
+                }
+              }
+              //even number borders
+              p:nth-child(even) {
+                border-left: 4px solid;
+                padding-right: 0;
+                
+                &:before {
+                  right: 100%; 
+                  margin-right: -20px;
+                }
+              }
+              //handle first and last
+              p:first-child {
+                border-top: 0;
+                border-top-right-radius:0;
+                border-top-left-radius:0;
+              }
+              p:last-child {
+                border-bottom-right-radius:0;
+                border-bottom-left-radius:0;
+              }
+        }
+        
+    }
+    
+    
+    /* ************* SKILLS ***************** */
+    .my_skills {
+
+        /* Div Style */
+        height: 600px;
+        border-radius: 15px;
+        margin-inline: 1.5em;
+        background-color: #1A374D;
+        box-shadow: 10px 10px 10px white;
+
+        .all_hard_skills {
+    
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        
+            h2 {
+                text-align: center;
+                color: #ADCBD7;
+                margin-top: 0.5em;
+    
+            }
+            .skill {
+        
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                margin-inline: 0.5em;
+            
+                .progress-bar {
+                    /* Colors */
+                    background-color: #d1d5db;
+                
+                    /* Rounded border */
+                    border-radius: 9999px;
+                    padding: 0.25rem;
+                
+                    /*Width*/
+                    width: 80%;
+                
+                    &_progress {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 0.5px;
+                    
+                        /* Colors */
+                        background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+                        color: #ADCBD7;
+                    
+                        /* Rounded border */
+                        border-radius: 9999px;
+                    }
+                }
+            
+                .progress-bar-skill {
+            
+                    p {
+                        font-size: 24px;
+                        color: #ADCBD7;
+                        margin-left: 5em;
+                    }
+                }
+            }
+        }
+
+        .all_soft_skills {
+
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-inline: 5em;
+            margin-top: 2em;
+
+            h2 {
+
+                text-align: center;
+                color: #ADCBD7;
+                margin-top: 0.5em;
+            }
+
+            .soft_skills {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 35px;
+
+                .radial-progress-bar {
+                    position: relative;
+                    height: var(--radial-progress-bar-size);
+                    width: var(--radial-progress-bar-size);
+
+                    &__percentages {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                    
+                        /* Rounded border */
+                        border: var(--radial-progress-bar-border-width) solid #d1d5db;
+                        border-radius: 9999px;
+                    
+                        /* Size */
+                        height: 100%;
+                        width: 100%;
+                        color: #ADCBD7;
+                    }
+
+                    &__curve {
+                        /* Position */
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                    
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
+                    
+                        /* If percentages is less than 50 */
+                        /* clip: rect(
+                            0px,
+                            var(--radial-progress-bar-size),
+                            var(--radial-progress-bar-size),
+                            calc(var(--radial-progress-bar-size) * 0.5),
+                            0px
+                        ); */
+                    
+                        /* If percentages is greater than or equals to 50 */
+                        clip: rect(auto, auto, auto, auto);
+                    }
+                    
+                    &__half {
+                        /* Take full size */
+                        height: 100%;
+                        position: absolute;
+                        width: 100%;
+                    
+                        /*
+                        Background color of curve.
+                        The border width should be the same as the area showing the percentages
+                        */
+                        border: var(--radial-progress-bar-border-width) solid #743ad5;
+                        border-radius: 9999px;
+                    }
+                    
+                    &__half--first {
+                        /* Position */
+                        clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
+                    
+                        /* Number of percentages * 360 / 100 */
+                        transform: rotate(270deg);
+                    }
+                    
+                    &__half--second {
+                        /* Position */
+                        clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
+                    
+                        /* If percentages is less than 50 */
+                        /* transform: rotate(0deg); */
+                    
+                        /* If percentages is greater than or equals to 50 */
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    
+} /* body end */
+
+/* ------------------------------------- */
+:root {
+    --radial-progress-bar-size: 8rem;
+    --radial-progress-bar-border-width: 0.75rem;
+}
+/* ------------------------------------- */
+
