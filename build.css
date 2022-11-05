@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,8 @@
 body {
   font-family: "LeagueSpartan";
   background-color: #406882;
+  /* ********************* NAME **************** */
+  /* *************** SEPARATOR **************** */
   /* ********** QUI JE SUIS *********** */
   /* ************* SKILLS ***************** */
 }
@@ -56,9 +59,29 @@ body .navbar .navbar_ul li a {
   font-size: 20px;
   color: #1A374D;
   text-decoration: none;
+  transition: transform 0.5s;
 }
 body .navbar .navbar_ul li a:hover {
   border-bottom: 2px solid #743ad5;
+}
+body .name-title {
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+body .name-title .first-title {
+  text-align: center;
+  font-size: 75px;
+}
+body .name-title .second-title {
+  text-align: center;
+  font-size: 55px;
+}
+body .name-title .gradient {
+  background: -webkit-linear-gradient(#d53a9d, #743ad5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 body .separator {
   /* Content is centered horizontally */
@@ -68,10 +91,11 @@ body .separator {
   position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
+  opacity: 0.75;
 }
 body .separator__content {
   /* We won't see the separator line */
-  background: #fff;
+  background: #6998AB;
   border-radius: 20px;
   /* Displayed at the center of separator */
   left: 50%;
@@ -83,11 +107,18 @@ body .separator__content {
   /* Demo */
   width: 60%;
   text-align: center;
+  color: #6998AB;
 }
 body .separator__separator {
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid #6998AB;
   height: 1px;
   width: 100%;
+}
+body .presentation {
+  text-align: center;
+  color: #ADCBD7;
+  margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 body .qui-je-suis {
   display: flex;
@@ -161,6 +192,7 @@ body .my_skills .all_hard_skills {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  margin-inline: 20px;
 }
 body .my_skills .all_hard_skills h2 {
   text-align: center;
@@ -293,5 +325,38 @@ body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half--second
 }
 
 /* ------------------------------------- */
+/********************************************/
+.project {
+  text-align: center;
+  color: #ADCBD7;
+  margin-top: 0.5em;
+}
+
+.grid-gallery {
+  padding-top: 30px;
+  display: grid; /* crée le layout en 2D */
+  gap: 80px;
+  grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
+  grid-template-rows: 30vh 30vh 30vh 30vh;
+  padding-inline: 10vh;
+}
+.grid-gallery div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
+}
+.grid-gallery div:hover {
+  transform: scale(1.2);
+}
+.grid-gallery div img {
+  width: 95%;
+  border-radius: 16px;
+}
+@media screen and (max-width: 900px) {
+  .grid-gallery {
+    padding-inline: 5vh;
+  }
+}
 
 /*# sourceMappingURL=build.css.map */
