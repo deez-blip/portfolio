@@ -24,6 +24,7 @@ body {
   /* *************** SEPARATOR **************** */
   /* ********** QUI JE SUIS *********** */
   /* ************* SKILLS ***************** */
+  /* ************* GALLERY **************** */
 }
 body .navbar {
   display: flex;
@@ -44,6 +45,12 @@ body .navbar .logo h2 {
   font-size: 35px;
   color: #1A374D;
 }
+@media screen and (max-width: 500px) {
+  body .navbar .logo h2 {
+    margin-left: 1vh;
+    font-size: 30px;
+  }
+}
 body .navbar .infos {
   display: flex;
   align-items: center;
@@ -53,6 +60,14 @@ body .navbar .navbar_ul {
   display: flex;
   gap: 40px;
   margin-right: 5vh;
+}
+@media screen and (max-width: 900px) {
+  body .navbar .navbar_ul {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    margin-right: 1vh;
+  }
 }
 body .navbar .navbar_ul li a {
   padding: 0.5em;
@@ -231,6 +246,11 @@ body .my_skills .all_hard_skills .skill .progress-bar-skill p {
   color: #ADCBD7;
   margin-left: 5em;
 }
+@media screen and (max-width: 500px) {
+  body .my_skills .all_hard_skills .skill .progress-bar-skill p {
+    margin-left: 0px;
+  }
+}
 body .my_skills .all_soft_skills {
   display: flex;
   flex-direction: column;
@@ -316,6 +336,43 @@ body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half--second
   /* If percentages is greater than or equals to 50 */
   transform: rotate(180deg);
 }
+body .project {
+  text-align: center;
+  color: #ADCBD7;
+  margin-top: 0.5em;
+}
+body .grid-gallery {
+  padding-top: 30px;
+  display: grid; /* crée le layout en 2D */
+  gap: 80px;
+  grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
+}
+@media screen and (max-width: 500px) {
+  body .grid-gallery {
+    padding-top: 30px;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body .grid-gallery div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
+}
+body .grid-gallery div:hover {
+  transform: scale(1.2);
+}
+body .grid-gallery div img {
+  width: 95%;
+  border-radius: 16px;
+}
+@media screen and (max-width: 900px) {
+  body .grid-gallery {
+    padding-inline: 5vh;
+  }
+}
 
 /* body end */
 /* ------------------------------------- */
@@ -325,38 +382,27 @@ body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half--second
 }
 
 /* ------------------------------------- */
-/********************************************/
-.project {
+.contact {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact .contactTitle {
+  color: #743ad5;
   text-align: center;
-  color: #ADCBD7;
-  margin-top: 0.5em;
 }
-
-.grid-gallery {
-  padding-top: 30px;
-  display: grid; /* crée le layout en 2D */
-  gap: 80px;
-  grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
-  grid-template-rows: 30vh 30vh 30vh 30vh;
-  padding-inline: 10vh;
-}
-.grid-gallery div {
+.contact .contactContent {
+  margin: 0 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.5s;
+  justify-content: center;
 }
-.grid-gallery div:hover {
-  transform: scale(1.2);
+.contact .contactContent p {
+  color: #ADCBD7;
 }
-.grid-gallery div img {
-  width: 95%;
-  border-radius: 16px;
-}
-@media screen and (max-width: 900px) {
-  .grid-gallery {
-    padding-inline: 5vh;
-  }
+.contact .contactContent a button {
+  background-color: #743ad5;
 }
 
 /*# sourceMappingURL=build.css.map */

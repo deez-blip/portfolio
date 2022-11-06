@@ -41,6 +41,11 @@ body {
                 margin-left: 5vh;
                 font-size: 35px;
                 color: #1A374D;
+
+                @media screen and (max-width: 500px) {
+                    margin-left: 1vh;
+                    font-size: 30px;
+                }
             }
                
         }
@@ -55,6 +60,14 @@ body {
             display: flex;
             gap: 40px;
             margin-right: 5vh;
+
+            @media screen and (max-width: 900px) {
+                
+                list-style: none;
+                display: flex;
+                gap: 0px;
+                margin-right: 1vh;
+            }
             li {
 
                 a {
@@ -279,6 +292,10 @@ body {
                         font-size: 24px;
                         color: #ADCBD7;
                         margin-left: 5em;
+
+                        @media screen and (max-width: 500px) {
+                            margin-left: 0px;
+                        }
                     }
                 }
             }
@@ -390,6 +407,48 @@ body {
             }
         }
     }
+
+    /* ************* GALLERY **************** */
+    .project {
+        text-align: center;
+        color: #ADCBD7;
+        margin-top: 0.5em;
+    }
+    .grid-gallery {
+        padding-top: 30px;
+        display: grid; /* crée le layout en 2D */
+        gap: 80px;
+        grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
+
+        @media screen and (max-width: 500px) {
+            padding-top: 30px;
+            display: grid;
+            gap: 35px;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.5s;
+    
+            &:hover {
+                transform: scale(1.2);
+            }
+    
+            img {
+                width: 95%;
+                border-radius: 16px;
+            }
+        }
+    
+        @media screen and (max-width: 900px) {
+            padding-inline: 5vh;
+        }
+    
+    }
+    
     
 } /* body end */
 
@@ -400,39 +459,31 @@ body {
 }
 /* ------------------------------------- */
 
+.contact {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-/********************************************/
-.project {
-    text-align: center;
-    color: #ADCBD7;
-    margin-top: 0.5em;
-}
-.grid-gallery {
-    padding-top: 30px;
-    display: grid; /* crée le layout en 2D */
-    gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
-    grid-template-rows: 30vh 30vh 30vh 30vh;
-    padding-inline: 10vh;
+    .contactTitle {
+        color: #743ad5;
+        text-align: center;
+    }
 
-    div {
+    .contactContent {
+        margin: 0 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: transform 0.5s;
+        justify-content: center;
 
-        &:hover {
-            transform: scale(1.2);
+        p {
+            color: #ADCBD7;
         }
 
-        img {
-            width: 95%;
-            border-radius: 16px;
+        a {
+            button {
+                background-color: #743ad5;
+            }
         }
     }
-
-    @media screen and (max-width: 900px) {
-        padding-inline: 5vh;
-    }
-
 }
