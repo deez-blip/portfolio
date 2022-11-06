@@ -376,7 +376,7 @@ body {
     .grid-gallery {
         padding-top: 30px;
         display: grid; /* crée le layout en 2D */
-        gap: 80px;
+        gap: 60px;
         grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
 
         @media screen and (max-width: 500px) {
@@ -402,7 +402,7 @@ body {
             }
         }
     
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 500px) {
             padding-inline: 5vh;
         }
     
@@ -412,10 +412,17 @@ body {
         margin: 5%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-    
+
+        @media screen and (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
         .contactTitle {
-            color: #743ad5;
+            font-size: 34px;
             text-align: center;
+            color: #ADCBD7;
         }
     
         .contactContent {
@@ -427,11 +434,16 @@ body {
     
             p {
                 color: #ADCBD7;
+                text-align: center;
             }
     
             a {
                 button {
-                    background-color: #743ad5;
+                    background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+                    width: 100px;
+                    height: 40px;
+                    margin-top: 1em;
+                    border: none;
                 }
             }
         }

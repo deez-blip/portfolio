@@ -310,7 +310,7 @@ body .project {
 body .grid-gallery {
   padding-top: 30px;
   display: grid; /* crée le layout en 2D */
-  gap: 80px;
+  gap: 60px;
   grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
 }
 @media screen and (max-width: 500px) {
@@ -334,7 +334,7 @@ body .grid-gallery div img {
   width: 95%;
   border-radius: 16px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   body .grid-gallery {
     padding-inline: 5vh;
   }
@@ -344,9 +344,17 @@ body .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 500px) {
+  body .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 body .contact .contactTitle {
-  color: #743ad5;
+  font-size: 34px;
   text-align: center;
+  color: #ADCBD7;
 }
 body .contact .contactContent {
   margin: 0 10%;
@@ -357,9 +365,14 @@ body .contact .contactContent {
 }
 body .contact .contactContent p {
   color: #ADCBD7;
+  text-align: center;
 }
 body .contact .contactContent a button {
-  background-color: #743ad5;
+  background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  width: 100px;
+  height: 40px;
+  margin-top: 1em;
+  border: none;
 }
 
 /* body end */
