@@ -40,13 +40,13 @@ body .navbar .logo img {
   height: 100%;
   margin-left: 5vh;
 }
-body .navbar .logo h2 {
+body .navbar .logo h1 {
   margin-left: 5vh;
   font-size: 35px;
   color: #1A374D;
 }
 @media screen and (max-width: 500px) {
-  body .navbar .logo h2 {
+  body .navbar .logo h1 {
     margin-left: 1vh;
     font-size: 30px;
   }
@@ -209,7 +209,8 @@ body .my_skills .all_hard_skills {
   gap: 35px;
   margin-inline: 20px;
 }
-body .my_skills .all_hard_skills h2 {
+body .my_skills .all_hard_skills h4 {
+  font-size: 24px;
   text-align: center;
   color: #ADCBD7;
   margin-top: 0.5em;
@@ -262,7 +263,8 @@ body .my_skills .all_soft_skills .names {
   display: flex;
   justify-content: space-around;
 }
-body .my_skills .all_soft_skills .names h2 {
+body .my_skills .all_soft_skills .names h5 {
+  font-size: 24px;
   text-align: center;
   color: #ADCBD7;
   margin-top: 0.5em;
@@ -340,6 +342,7 @@ body .project {
   text-align: center;
   color: #ADCBD7;
   margin-top: 0.5em;
+  font-size: 24px;
 }
 body .grid-gallery {
   padding-top: 30px;
