@@ -233,7 +233,7 @@ body {
     .my_skills {
 
         /* Div Style */
-        height: 600px;
+        height: 700px;
         border-radius: 15px;
         margin-inline: 1.5em;
         background-color: #1A374D;
@@ -252,6 +252,10 @@ body {
                 color: #ADCBD7;
                 margin-top: 0.5em;
     
+            }
+
+            .soft-skills {
+                margin-bottom: 14px;
             }
             .skill {
         
@@ -302,6 +306,17 @@ body {
             }
         }
 
+        .soft-skills-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            h5 {
+                font-size: 24px;
+                color: #ADCBD7;
+            }
+        }
+
         .all_soft_skills {
 
             display: flex;
@@ -309,6 +324,10 @@ body {
             margin-inline: 5em;
             margin-top: 2em;
             justify-content: space-around;
+
+            @media screen and (max-width: 500px) {
+                margin-inline: 14em;
+            }
 
             .round-soft-skills {
                 display: flex;
@@ -356,15 +375,22 @@ body {
                         stroke: url(#GradientColor);
                         stroke-width: 20px;
                         stroke-dasharray: 472;
+                    }
+                    .teamwork {
                         stroke-dashoffset: 100;
-            
-                        animation: anim 2s linear forwards;
+                    }
+                    .leading {
+                        stroke-dashoffset: 165.2;
+                    }
+                    .listening {
+                        stroke-dashoffset: 80;
                     }
                 }
             
             }
         }
     }
+        
 
     /* ************* GALLERY **************** */
     .project {
@@ -375,9 +401,9 @@ body {
     }
     .grid-gallery {
         padding-top: 30px;
-        display: grid; /* crée le layout en 2D */
+        display: grid; /* 2D layout */
         gap: 60px;
-        grid-template-columns: 1fr 1fr 1fr; /* 4 colonne de 1 fraction de notre ecran */
+        grid-template-columns: 1fr 1fr 1fr;
 
         @media screen and (max-width: 500px) {
             padding-top: 30px;
@@ -399,6 +425,12 @@ body {
             img {
                 width: 95%;
                 border-radius: 16px;
+                max-height: 300px;
+                object-fit: cover;
+            }
+            p {
+                color: #ADCBD7;
+                margin-bottom: 0.5vh;
             }
         }
     
