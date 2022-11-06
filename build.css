@@ -254,89 +254,52 @@ body .my_skills .all_hard_skills .skill .progress-bar-skill p {
 }
 body .my_skills .all_soft_skills {
   display: flex;
-  flex-direction: column;
-  gap: 35px;
+  gap: 10%;
   margin-inline: 5em;
   margin-top: 2em;
-}
-body .my_skills .all_soft_skills .names {
-  display: flex;
   justify-content: space-around;
 }
-body .my_skills .all_soft_skills .names h5 {
-  font-size: 24px;
-  text-align: center;
-  color: #ADCBD7;
-  margin-top: 0.5em;
-}
-body .my_skills .all_soft_skills .soft_skills {
+body .my_skills .all_soft_skills .round-soft-skills {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 35px;
-}
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar {
-  position: relative;
-  height: var(--radial-progress-bar-size);
-  width: var(--radial-progress-bar-size);
-}
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__percentages {
-  /* Center the content */
   align-items: center;
-  display: flex;
   justify-content: center;
-  /* Rounded border */
-  border: var(--radial-progress-bar-border-width) solid #d1d5db;
-  border-radius: 9999px;
-  /* Size */
-  height: 100%;
-  width: 100%;
+}
+body .my_skills .all_soft_skills .round-soft-skills .round-skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+body .my_skills .all_soft_skills .round-soft-skills .round-skill .outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+body .my_skills .all_soft_skills .round-soft-skills .round-skill .inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .my_skills .all_soft_skills .round-soft-skills .round-skill .inner #number {
+  font-weight: 600px;
   color: #ADCBD7;
 }
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__curve {
-  /* Position */
-  left: 0;
+body .my_skills .all_soft_skills .round-soft-skills svg {
   position: absolute;
-  top: 0;
-  /* Take full size */
-  height: 100%;
-  width: 100%;
-  /* If percentages is less than 50 */
-  /* clip: rect(
-      0px,
-      var(--radial-progress-bar-size),
-      var(--radial-progress-bar-size),
-      calc(var(--radial-progress-bar-size) * 0.5),
-      0px
-  ); */
-  /* If percentages is greater than or equals to 50 */
-  clip: rect(auto, auto, auto, auto);
+  left: 202;
 }
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half {
-  /* Take full size */
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /*
-  Background color of curve.
-  The border width should be the same as the area showing the percentages
-  */
-  border: var(--radial-progress-bar-border-width) solid #743ad5;
-  border-radius: 9999px;
-}
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half--first {
-  /* Position */
-  clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
-  /* Number of percentages * 360 / 100 */
-  transform: rotate(270deg);
-}
-body .my_skills .all_soft_skills .soft_skills .radial-progress-bar__half--second {
-  /* Position */
-  clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
-  /* If percentages is less than 50 */
-  /* transform: rotate(0deg); */
-  /* If percentages is greater than or equals to 50 */
-  transform: rotate(180deg);
+body .my_skills .all_soft_skills .round-soft-skills svg circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 100;
+  animation: anim 2s linear forwards;
 }
 body .project {
   text-align: center;
@@ -376,6 +339,28 @@ body .grid-gallery div img {
     padding-inline: 5vh;
   }
 }
+body .contact {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .contact .contactTitle {
+  color: #743ad5;
+  text-align: center;
+}
+body .contact .contactContent {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .contact .contactContent p {
+  color: #ADCBD7;
+}
+body .contact .contactContent a button {
+  background-color: #743ad5;
+}
 
 /* body end */
 /* ------------------------------------- */
@@ -385,27 +370,5 @@ body .grid-gallery div img {
 }
 
 /* ------------------------------------- */
-.contact {
-  margin: 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.contact .contactTitle {
-  color: #743ad5;
-  text-align: center;
-}
-.contact .contactContent {
-  margin: 0 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.contact .contactContent p {
-  color: #ADCBD7;
-}
-.contact .contactContent a button {
-  background-color: #743ad5;
-}
 
 /*# sourceMappingURL=build.css.map */
